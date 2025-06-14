@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr Wolfy | Artist Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="glass-header">
+    <nav>
+      <h1 class="logo"></h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="healingodyssey.html">HealingOdyssey</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="yt.html">Videos</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h2><span class="gradient-hover">Indeewari Gamage</span></h2>
+      <p>Discover the Music of Indeewari Gamage.</p>
+      <a href="#youtube-section" class="btn-primary">Listen Now</a>
+ 
+    </div>
+    <div class="slideshow">
+      <img
+        src="image/atheethaya laga.png"
+        alt="Live Performance"
+        class="slide active"
+      />
+      <img
+        src="image/pem kakula.jpg"
+        alt="Album Cover"
+        class="slide"
+      />
+      <img
+        src="image/ran kenden.jpg"
+        alt="Studio Session"
+        class="slide"
+      />
+    </div>
+  </section>
+
+  <section id="about" class="glass-section fade-in">
+    <h2>About Me</h2>
+    <p>
+      Indeewari Gamage is a singer and artist from Sri Lanka, now living in Sweden. She blends her cultural roots with modern sounds to create music that connects deeply with listeners. With a unique voice and heartfelt style, Indeewari brings soulful stories to life across borders.
+    </p>
+  </section>
+
+    <section id="youtube-section" class="glass-section fade-in">
+  <a href="yt.html"><h2 class="section-title">YouTube Highlights</a>
+  <br>
+  <br>
+  <div class="youtube-carousel">
+    <div class="youtube-slide">
+      <iframe src="https://www.youtube.com/embed/VvQvLbFN6S8" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/BribL062v1I" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/cphEhBoc4TA" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- add more slides as needed -->
+  </div>
+</section>
+
+
+  <section id="music" class="glass-section fade-in">
+    <h2>Music</h2>
+    <div class="music-list">
+      <article class="music-item">
+        <h3>Sansara Sihinaye </h3>
+        <audio controls>
+          <source src="mp3/sans.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </article>
+    </div>
+  </section>
+
+  <section id="gallery" class="glass-section fade-in">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img
+        src="image/indi1.jpg"
+        alt="Performance 1"
+      />
+      <img
+        src="image/indi2.jpg"
+        alt="Performance 2"
+      />
+      <img
+        src="image/indi3.jpg"
+        alt="Studio Work"
+      />
+      <img
+        src="image/indi4.jpg"
+        alt="Album Cover Shoot"
+      />
+    </div>
+  </section>
+
+
+
+  <section id="videos" class="glass-section fade-in">
+    <h2>Videos</h2>
+    <div class="video-gallery">
+      <div class="video-item">
+
+      </div>
+      <div class="video-item">
+        <video width="100%" controls muted>
+          <source
+            src="video/dearmalavid.mp4"
+            type="video/webm"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+    <section id="Packages" class="glass-section fade-in">
+    <h2>Packages</h2>
+    <p>
+      Ready for a deeper dive? My Packages offer unique ways to connect with my art—from personalized experiences to exclusive content.
+    </p>
+    <center><a href="packages.html" class="btn-primary">View Packages</a></center>
+  </section>
+
+  <section id="contact" class="glass-section fade-in">
+    <h2>Contact</h2>
+    <p>For bookings and inquiries, reach out:</p>
+    <div class="social-links-container"> <div class="social-icon"><a href="https://www.facebook.com/share/1C6ikBJH2t/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a></div>
+      <div class="social-icon"><a href="#"><i class="fab fa-instagram"></i></a></div>
+      <div class="social-icon"><a href="https://www.youtube.com/@INDEEWARI1"><i class="fab fa-youtube"></i></a></div>
+    </div>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-primary">Send</button>
+    </form>
+</section>
+
+  <footer class="glass-footer">
+    <p>&copy; Made By Pavithra Wijesooriya. All Rights Reserved.</p>
+    <p>Built in 🌎 with ❤️ </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

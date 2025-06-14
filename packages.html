@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr Wolfy | Artist Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Minimal styles needed to support horizontal scrolling of packages */
+    .package-container {
+      position: relative;
+      padding: 2rem 1rem;
+      background: rgba(255 255 255 / 0.05);
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: white;
+    }
+    .package-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 1rem;
+      padding: 1rem 0;
+      scrollbar-width: thin;
+      scrollbar-color: #888 transparent;
+    }
+    .package-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+    .package-scroll::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    .package-card {
+      flex: 0 0 300px;
+      background: rgba(255 255 255 / 0.1);
+      border-radius: 12px;
+      padding: 1rem;
+      color: white;
+      box-shadow: 0 0 10px rgba(255 255 255 / 0.1);
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255 255 255 / 0.2);
+      color: white;
+      font-size: 2rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.3s ease;
+      z-index: 10;
+    }
+    .arrow:hover {
+      background: rgba(255 255 255 / 0.5);
+    }
+    .arrow.left {
+      left: 0.5rem;
+    }
+    .arrow.right {
+      right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="glass-header">
+    <nav>
+      <h1 class="logo"></h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Music</a></li>
+        <li><a href="healingodyssey.html">HealingOdyssey</a></li>
+        <li><a href="index.html">Gallery</a></li>
+        <li><a href="yt.html">Videos</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h2><span class="gradient-hover">Indeewari Gamage</span></h2>
+      <p>Discover the Music of Indeewari Gamage.</p>
+      <a href="#music" class="btn-primary">Listen Now</a>
+    </div>
+    <div class="slideshow">
+      <img src="image/atheethaya laga.png" alt="Live Performance" class="slide active" />
+      <img src="image/pem kakula.jpg" alt="Album Cover" class="slide" />
+      <img src="image/ran kenden.jpg" alt="Studio Session" class="slide" />
+    </div>
+  </section>
+<section class="package-container">
+    <h2 class="section-title">Performance Packages</h2>
+
+    <div class="arrow left" onclick="scrollPackages(-1)">&#8592;</div>
+    <div class="arrow right" onclick="scrollPackages(1)">&#8594;</div>
+
+    <div class="package-scroll" id="packageScroll">
+      <!-- Package 1 -->
+      <div class="package-card">
+        <h3>💫 Uplifting Soulful Concert</h3>
+        <ul>
+          <li>🎤 Live solo singing with backing tracks</li>
+          <li>🌺 Songs in Sinhala, Hindi, Urdu, and Tamil</li>
+          <li>🌿 Intro to the song’s meaning & spiritual message</li>
+          <li>🧘 Ideal for: elderly care, cultural gatherings</li>
+          <li>⏰ Duration: 30–45 minutes</li>
+          <li>💶 From: 1,500 SEK</li>
+        </ul>
+        <p><em>“An uplifting, heart-opening concert-style journey through love, rhythm, and joy.”</em></p>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="package-card">
+        <h3>🎭 Deep Cultural Music Experience</h3>
+        <ul>
+          <li>🎤 10 curated songs live with quality tracks</li>
+          <li>💞 Starts soulful, ends joyful with gentle interaction</li>
+          <li>📖 Cultural & emotional storytelling</li>
+          <li>🎭 Expressive, interactive, mindful music journey</li>
+          <li>📅 Duration: ~1.5 hrs</li>
+          <li>💶 From 4,500–6,500 SEK or ticket-based</li>
+        </ul>
+        <p><strong>Ideal for:</strong> Cultural nights, community events, spiritual groups</p>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="package-card">
+        <h3>💃 Cultural Music & Dance Experience</h3>
+        <ul>
+          <li>🎶 Live singing + movement engagement</li>
+          <li>💃 Simple dance/gesture taught</li>
+          <li>📖 Background storytelling</li>
+          <li>👨‍👩‍👧‍👦 Perfect for schools, Red Cross, integration</li>
+          <li>⏰ Duration: 60 mins</li>
+          <li>💶 From: 2,500 SEK</li>
+        </ul>
+      </div>
+
+      <!-- Package 4 -->
+      <div class="package-card">
+        <h3>🕉 Spiritual & Devotional Music (Premium)</h3>
+        <ul>
+          <li>🕉 Harmonium + tabla (with vocals)</li>
+          <li>✨ Mantras, bhajans, or original songs</li>
+          <li>🌌 Meditation-ready, deeply calming</li>
+          <li>🗣 Optional guided reflection</li>
+          <li>⏰ 60–90 mins</li>
+          <li>💶 From: 3,500 SEK</li>
+        </ul>
+      </div>
+
+      <!-- Package 5 -->
+      <div class="package-card">
+        <h3>🎵 Sri Lankan Folk Music Workshop</h3>
+        <ul>
+          <li>🎵 Teach 1–2 folk songs + rhythm</li>
+          <li>🥁 Includes hand drumming & group rhythm</li>
+          <li>🌱 Cultural & emotional connections</li>
+          <li>📚 Best for education, schools</li>
+          <li>⏰ 60–90 mins</li>
+          <li>💶 From: 2,000 SEK</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="glass-footer">
+    <p>&copy; Made By Pavithra Wijesooriya. All Rights Reserved.</p>
+    <p>Built in 🌎 with ❤️ and ☕</p>
+  </footer>
+
+  <script>
+    function scrollPackages(direction) {
+      const container = document.getElementById("packageScroll");
+      const scrollAmount = container.offsetWidth * 0.8; // scroll by 80% width
+      container.scrollBy({
+        left: scrollAmount * direction,
+        behavior: "smooth"
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
