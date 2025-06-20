@@ -124,7 +124,7 @@ nav {
 }
 
 .gradient-hover {
-  background: linear-gradient(90deg, #ffffff 0%, #eeeeee 25%, #ffffff 50%, #eeeeee 75%, #ffffff 100%);
+  background: linear-gradient(90deg, #eeeeee 0%, #eeeeee 25%, #eeeeee 50%, #eeeeee 75%, #eeeeee 100%);
   background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;
