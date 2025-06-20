@@ -32,35 +32,15 @@ faders.forEach(fader => {
 
 // Optional: Contact form submission
 const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', e => {
-  e.preventDefault();
-  alert('Thank you for reaching out! I will get back to you soon.');
-  contactForm.reset();
-});
-
-const navLinks = document.querySelectorAll('.nav-links li a');
-
-navLinks.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    link.style.position = 'relative';
-    let underline = document.createElement('span');
-    underline.classList.add('underline');
-    link.appendChild(underline);
-    setTimeout(() => {
-      underline.style.width = '100%';
-    }, 10);
+if (contactForm) {  // check if form exists on page
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Thank you for reaching out! I will get back to you soon.');
+    contactForm.reset();
   });
+}
 
-  link.addEventListener('mouseleave', () => {
-    const underline = link.querySelector('.underline');
-    if (underline) {
-      underline.style.width = '0';
-      setTimeout(() => underline.remove(), 300);
-    }
-  });
-});
-
-
+// Music items hover effect
 const musicItems = document.querySelectorAll('.music-item');
 
 musicItems.forEach(item => {
@@ -74,27 +54,34 @@ musicItems.forEach(item => {
   });
 });
 
+// YouTube carousel arrows functionality
+const carousel = document.querySelector('.youtube-carousel');
+const leftArrow = document.querySelector('.arrow.left');
+const rightArrow = document.querySelector('.arrow.right');
 
-let carousel = document.querySelector('.youtube-carousel');
-let playing = false;
+const scrollAmount = 300; // pixels to scroll on each arrow click
 
-function checkIfPlaying() {
-  const iframes = carousel.querySelectorAll("iframe");
-  for (const iframe of iframes) {
-    // This won't detect playback reliably due to cross-origin, so we simulate:
-    // You can only truly detect YT playing using the YouTube Player API
-  }
-  if (!playing) {
-    carousel.style.animationPlayState = 'running';
-  } else {
-    carousel.style.animationPlayState = 'paused';
-  }
+if (leftArrow && rightArrow && carousel) {
+  leftArrow.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  rightArrow.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  // Pause autoplay animation on hover if you have one (optional)
+  carousel.addEventListener('mouseenter', () => carousel.style.animationPlayState = 'paused');
+  carousel.addEventListener('mouseleave', () => carousel.style.animationPlayState = 'running');
 }
 
-// Basic autoplay
-carousel.addEventListener('mouseenter', () => carousel.style.animationPlayState = 'paused');
-carousel.addEventListener('mouseleave', () => carousel.style.animationPlayState = 'running');
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-
-
-//packages
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+}
