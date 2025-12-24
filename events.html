@@ -5,17 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Indeewari Gamage</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* --- Styles to support the realignment --- */
+    
+    .main-container {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+      color: #f0f0f0;
+    }
+
+    /* Realigning the section headers to match your style */
+    .section-header {
+      text-align: left;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header h3 {
+      color: white;
+      font-size: 1.8rem;
+      border-left: 4px solid rgba(255,255,255,0.3);
+      padding-left: 15px;
+    }
+
+    /* Responsive Grid for Images and Videos */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Universal Media Styling */
+    .media-grid img, 
+    .media-grid video {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, filter 0.3s ease;
+      background: rgba(255,255,255,0.05); /* Placeholder while loading */
+    }
+
+    .media-grid img:hover {
+      transform: translateY(-5px);
+      filter: brightness(1.1);
+    }
+
+    /* Specific adjustment for the single upcoming poster */
+    .centered-poster {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-header h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="glass-header">
     <nav>
-
       <button id="hamburger" aria-label="Toggle navigation">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</button>
-
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <h1 class="logo"></h1>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -34,52 +95,55 @@
       <h2><span class="gradient-hover">Indeewari Gamage</span></h2>
       <p>Discover the Music of Indeewari Gamage.</p>
       <a href="#music" class="btn-primary">Listen Now</a>
-      <br>
-      <br>
-      <br>
-      <br>
+      <br><br><br><br>
       <div></div>
     </div>
     <div class="slideshow">
-      <img
-        src="image/atheethaya laga.png"
-        alt="Live Performance"
-        class="slide active"
-      />
-      <img
-        src="image/pem kakula.jpg"
-        alt="Album Cover"
-        class="slide"
-      />
-      <img
-        src="image/ran kenden.jpg"
-        alt="Studio Session"
-        class="slide"
-      />
+      <img src="image/atheethaya laga.png" alt="Live Performance" class="slide active" />
+      <img src="image/pem kakula.jpg" alt="Album Cover" class="slide" />
+      <img src="image/ran kenden.jpg" alt="Studio Session" class="slide" />
     </div>
   </section>
 
-<div style="padding: 2rem; max-width: 1000px; margin: auto; color: #f0f0f0; text-align: center;">
-
-
-      <div style="text-align: left;">
-        <h3 style="margin-top: 2rem; color: white; font-size: 1.6rem;">Hela Gee</h3>
-        
-      </div>
-
-      <!-- Images -->
-      <img src="image/ods1.jpg" alt="Healing Odyssey Image 2" style="max-width: 300px; filter: brightness(100%) contrast(100%);">
-      <img src="image/ods2.jpg" alt="Healing Odyssey Image 2" style="max-width: 300px; filter: brightness(100%) contrast(100%);">
-      <img src="image/ods3.jpg" alt="Healing Odyssey Image 2" style="max-width: 300px; filter: brightness(100%) contrast(100%);">
-      <img src="image/ods5.jpg" alt="Healing Odyssey Image 2" style="max-width: 300px; filter: brightness(100%) contrast(100%);">
-      <img src="image/ods6.jpg" alt="Healing Odyssey Image 2" style="max-width: 300px; filter: brightness(100%) contrast(100%);">
-
-
-
-
+  <main class="main-container" id="music">
+    
+    <div class="section-header">
+      <h3>Hela Gee</h3>
+    </div>
+    <div class="media-grid">
+      <img src="image/ods1.jpg" alt="Healing Odyssey 1">
+      <img src="image/ods2.jpg" alt="Healing Odyssey 2">
+      <img src="image/ods3.jpg" alt="Healing Odyssey 3">
+      <img src="image/ods5.jpg" alt="Healing Odyssey 4">
+      <img src="image/ods6.jpg" alt="Healing Odyssey 5">
     </div>
 
+    <div class="section-header">
+      <h3>Noorthi Vibe Music Evening</h3>
+    </div>
+    <div class="media-grid">
+      <img src="image/noorthivibeposter.jpg" alt="Noorthi Vibe Poster">
+      <video controls><source src="video/noorthivibe1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <video controls><source src="video/noorthivibe2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+    </div>
 
+    <div class="section-header">
+      <h3>Advent Concert</h3>
+    </div>
+    <div class="media-grid">
+      <img src="image/adventconcert.jpeg" alt="Advent Concert Poster">
+      <video controls><source src="video/advent1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <video controls><source src="video/advent2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+    </div>
+
+    <div class="section-header">
+      <h3>Music Story - Upcoming Show</h3>
+    </div>
+    <div class="centered-poster">
+      <img src="image/musicstory.jpeg" alt="Upcoming Music Story Show" style="width: 100%; border-radius: 15px;">
+    </div>
+
+  </main>
 
   <footer class="glass-footer">
     <p>&copy; Made By Pavithra Wijesooriya. All Rights Reserved.</p>
