@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indeewari Gamage</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* --- Styles to support the realignment --- */
+    
+    .main-container {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+      color: #f0f0f0;
+    }
+
+    /* Realigning the section headers to match your style */
+    .section-header {
+      text-align: left;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header h3 {
+      color: white;
+      font-size: 1.8rem;
+      border-left: 4px solid rgba(255,255,255,0.3);
+      padding-left: 15px;
+    }
+
+    /* Responsive Grid for Images and Videos */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Universal Media Styling */
+    .media-grid img, 
+    .media-grid video {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, filter 0.3s ease;
+      background: rgba(255,255,255,0.05); /* Placeholder while loading */
+    }
+
+    .media-grid img:hover {
+      transform: translateY(-5px);
+      filter: brightness(1.1);
+    }
+
+    /* Specific adjustment for the single upcoming poster */
+    .centered-poster {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-header h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="glass-header">
+    <nav>
+      <button id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <h1 class="logo"></h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="healingodyssey.html">Healing Odyssey</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="upcoming.html">Upcoming</a></li>
+        <li><a href="yt.html">Music Videos</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h2><span class="gradient-hover">Indeewari Gamage</span></h2>
+      <p>Discover the Music of Indeewari Gamage.</p>
+      <a href="#music" class="btn-primary">Listen Now</a>
+      <br><br><br><br>
+      <div></div>
+    </div>
+    <div class="slideshow">
+      <img src="image/atheethaya laga.png" alt="Live Performance" class="slide active" />
+      <img src="image/pem kakula.jpg" alt="Album Cover" class="slide" />
+      <img src="image/ran kenden.jpg" alt="Studio Session" class="slide" />
+    </div>
+  </section>
+
+  <main class="main-container" id="music">
+    
+    <div class="section-header">
+      <h3>Feedback</h3>
+    </div>
+    <div class="media-grid">
+      <img src="image/feedback1.jpeg" alt="Healing Odyssey 1">
+      <img src="image/feedback2.jpeg" alt="Healing Odyssey 2">
+      <img src="image/feedback3.jpeg" alt="Healing Odyssey 3"> 
+      <img src="image/feedback4.jpeg" alt="Healing Odyssey 4">
+      <img src="image/feedback5.jpeg" alt="Healing Odyssey 5">
+      <img src="image/feedback6.jpeg" alt="Healing Odyssey 6">
+      <img src="image/feedback7.jpeg" alt="Healing Odyssey 7">
+      <img src="image/feedback8.jpeg" alt="Healing Odyssey 8">
+
+    </div>
+
+  </main>
+
+  <footer class="glass-footer">
+    <p>&copy; Made By Pavithra Wijesooriya. All Rights Reserved.</p>
+    <p>Built in 🌎 with ❤️ </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
